@@ -5,40 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav></nav>
-
-    <!-- Main Layout -->
-    <div class="main-layout">
-        <!-- Sidebar -->
-        <aside class="sidebar"></aside>
-
-        <!-- Main Content -->
-        <div class="content">
-            <h1>Login</h1>
-            <form method="POST" action="{{ url_for('login') }}">
+<body class="bg-image">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form method="POST" action="">
                 {{ form.hidden_tag() }}
-                <div>
-                    {{ form.username.label }}<br>
-                    {{ form.username() }}
+                <div class="form-group">
+                    {{ form.username.label() }}
+                    {{ form.username(class="form-control") }}
                 </div>
-                <div>
-                    {{ form.password.label }}<br>
-                    {{ form.password() }}
+                <div class="form-group">
+                    {{ form.password.label() }}
+                    {{ form.password(class="form-control") }}
                 </div>
-                <div>
-                    {{ form.submit() }}
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="{{ url_for('register') }}">Signup</a></p>
                 </div>
             </form>
-            <p>Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.</p>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer></footer>
-
 </body>
 </html>

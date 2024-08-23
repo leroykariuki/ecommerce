@@ -78,7 +78,7 @@ def login():
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('index.html')
 
 
 @app.route('/logout', methods=['GET', 'POST'])
