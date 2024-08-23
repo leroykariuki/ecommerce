@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light grey background for content area */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black; /* Outstanding border */
+}
+
+/* Navbar styles */
+nav {
+    height: 60px; /* Height of the navbar */
+    background-color: white; /* White background for the navbar */
+    border-bottom: 1px solid #ccc; /* Very subtle, lighter grey bottom border */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Main layout containing sidebar and content */
+.main-layout {
+    display: flex;
+    flex-grow: 1; /* Fills the remaining space between the navbar and footer */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 220px; /* Width of the sidebar */
+    background-color: white; /* White background for the sidebar */
+    border-right: 1px solid #ccc; /* Very subtle, lighter grey right border */
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Main content area */
+.content {
+    flex-grow: 1;
+    background-color: #f0f0f0; /* Light grey background for the content area */
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    height: 60px; /* Height of the footer */
+    background-color: white; /* White background for the footer */
+    border-top: 1px solid #ccc; /* Very subtle, lighter grey top border */
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
